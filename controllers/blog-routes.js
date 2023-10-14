@@ -2,30 +2,42 @@ const router = require("express").Router();
 // Here is where we provide hardcoded data to render dynamically
 const posts = [
   {
-    post_name: "",
-    post_description: "",
+    id: 1,
+    post_name: "{{title}}",
+    post_description: "{{text}}",
   },
   {
-    post_name: "",
-    post_description:
-      "",
+    id: 2,
+    post_name: "{{title}}",
+    post_description: "{{text}}",
   },
   {
-    post_name: "",
-    post_description:
-      "",
+    id: 3,
+    post_name: "{{title}}",
+    post_description: "{{text}}",
   },
 ];
 
 //get all posts
 router.get("/", async (req, res) => {
-  res.render("all");
+  try {
+    res.render("all");
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+
+
+
+
 
 //get one post
 router.get("/posts/:num", async (req, res) => {
-  // This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
-  return res.render("all", posts[req.params.num - 1]);
+   try {
+      return res.render("all", posts[req.params.num - 1]);
+   } catch (err) {
+     res.status(500).json(err);
+   }
 });
 
 module.exports = router;
