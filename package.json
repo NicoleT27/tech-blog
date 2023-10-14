@@ -3,9 +3,38 @@
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
     "mysql2": "^3.6.1",
     "sequelize": "^6.33.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tech-blog",
+  "description": "a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleT27/tech-blog.git"
+  },
+  "keywords": [
+    "express",
+    "handlebars",
+    "mustache",
+    "node.js",
+    "dotenv",
+    "sequelize",
+    "mysql2",
+    "bcrypt"
+  ],
+  "author": "Nicole Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoleT27/tech-blog/issues"
+  },
+  "homepage": "https://github.com/NicoleT27/tech-blog#readme"
 }
