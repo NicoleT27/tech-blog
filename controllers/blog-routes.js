@@ -1,18 +1,15 @@
 const router = require("express").Router();
-// Here is where we provide hardcoded data to render dynamically
+
 const posts = [
   {
-    id: 1,
     post_name: "{{title}}",
     post_description: "{{text}}",
   },
   {
-    id: 2,
     post_name: "{{title}}",
     post_description: "{{text}}",
   },
   {
-    id: 3,
     post_name: "{{title}}",
     post_description: "{{text}}",
   },

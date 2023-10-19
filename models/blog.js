@@ -1,11 +1,9 @@
-// Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
-
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection.js");
+const sequelize = require("../config/connection");
 
-class Posts extends Model {}
+class Post extends Model {}
 
-Posts.init(
+Post.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -22,6 +20,7 @@ Posts.init(
       allowNull: false,
     },
   },
+
   {
     sequelize,
     freezeTableName: true,
@@ -30,4 +29,4 @@ Posts.init(
   }
 );
 
-module.exports = Posts;
+module.exports = Post;

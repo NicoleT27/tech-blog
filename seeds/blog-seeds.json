@@ -1,0 +1,15 @@
+[
+  {
+    "post_name": "post 1",
+    "post_description": "info about post3"
+   
+  },
+  {
+    "post_name": "post2",
+    "post_description": "info about post3"
+  },
+  {
+    "post_name": "post3",
+    "post_description": "info about post3"
+  }
+]
