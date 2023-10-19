@@ -1,0 +1,15 @@
+[
+  {
+    "post_name": "{{title}}",
+    "post_description": "{{text}}"
+  },
+  {
+    "post_name": "{{title}}",
+    "post_description": "{{text}}"
+  },
+  {
+    "post_name": "{{title}}",
+    "post_description": "{{text}}"
+  }
+]
+
