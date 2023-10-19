@@ -1,15 +1,17 @@
  [
  {
-    
-    "username": "carl_407",
+    "name":"Carl",
+    "email": "carl@hotmail.com",
     "password": "password"
   },
   {
-    "username": "amandaplease",
+    "name": "Amanda",
+    "email": "amanda@gmail.com",
     "password": "howdypartner"
   },
   {
-    "username": "dora_the_explorer",
+    "name": "Dora",
+    "email": "dora@yahoo.com",
     "password": "holamellamodora"
   }
 ]

@@ -1,7 +1,4 @@
-require("dotenv").config({
-  path: "../.env"
-})
-
+require("dotenv").config();
 const sequelize = require("../config/connection");
 const { User, Blog } = require("../models");
 
