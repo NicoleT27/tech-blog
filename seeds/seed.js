@@ -1,4 +1,3 @@
-require("dotenv").config();
 const sequelize = require("../config/connection");
 const { User, Blog } = require("../models");
 
@@ -9,9 +8,9 @@ const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+      individualHooks: true,
+      returning: true,
+    });
 
   process.exit(0);
 };
