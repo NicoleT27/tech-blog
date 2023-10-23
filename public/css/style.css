@@ -1,23 +1,74 @@
-header, .blog:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+*{
+  font-family: 'Playpen Sans', cursive;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+p{
+  text-align: center;
+  margin-top: 200px;
+  width:70%;
+  margin-left: 200px;
+  border: solid 3px black;
+ font-size: 20px;
+ border-radius: 10px;
 }
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+nav{
+    background-color: darkseagreen;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
 }
-
-
 .title{
-    text-align: center;
+    font-size: 40px;
+    font-weight: 400px;
+    text-align: left;
+    margin-left: 40px;
+}
+ul {
+  display: flex; 
+  list-style-type: none;
+}
+
+li {
+font-size: 20px;
+list-style-type: none;
+}
+
+li a {
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+ h2 { 
+  margin-top: 100px;
+}
+
+
+form {
+  width: 200px;
+  height: 30px;
+  
+}
+
+ .join{
+  display: flex;
+  justify-content: center;
+} 
+
+.row {
+  display: flex; 
+  justify-content: space-between; 
+  width: 30%;
+ 
+}
+
+.column {
+  margin: 30px; 
+  
+}
+
+button{
+   margin-top: 20px;
 }

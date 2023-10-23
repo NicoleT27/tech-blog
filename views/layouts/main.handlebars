@@ -1,27 +1,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <div class="blog-container">
-       <h1 class="title">
-       The Tech Blog
-      </h1>
-  
     <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+      <header class="title">
+         The Tech Blog
     </header>
-    <main class="container container-fluid mt-5">
+    <ul>
+      <li>
+        <a href="/login" class="login">Login</a>
+      </li>
+      <li>
+        <a href="/" class="home">Home</a>
+        
+      </li>
+    </ul>
+   </nav>
+    <main>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
