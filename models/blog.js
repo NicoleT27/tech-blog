@@ -15,11 +15,11 @@ Blog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_description: {
+    post_desc: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
