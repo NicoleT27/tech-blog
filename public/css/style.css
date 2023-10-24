@@ -51,24 +51,34 @@ form {
   height: 30px;
   
 }
-
- .join{
+.card{
   display: flex;
-  justify-content: center;
-} 
-
-.row {
-  display: flex; 
-  justify-content: space-between; 
-  width: 30%;
- 
-}
-
-.column {
-  margin: 30px; 
-  
+ flex-direction: column;
+  align-items:center;
+  margin-top: 100px;
 }
 
 button{
    margin-top: 20px;
+}
+.signup{
+  text-decoration: none;
+}
+.btn{
+  background-color: blanchedalmond;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 80px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.card-header{
+  font-size: 20px;
+}
+.text-box{
+  width: 100%;
+  padding: 3%;
+}
+.form-label{
+  font-size: 20px;
 }
