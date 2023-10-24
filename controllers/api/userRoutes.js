@@ -18,15 +18,18 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  console.log(req.body);
   try {
     const newUser = await User.findOne({
       where: { username: req.body.username },
+      // where: { email: req.body.email },
+      // where: { name: req.body.name },
     });
 
     if (!newUser) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect email please try again" });
       return;
     }
 
@@ -35,13 +38,14 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect password, please try again" });
       return;
     }
 
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.loggedIn = true;
+       res.redirect("/profile");
 
       res.json({ user: newUser, message: "You are now logged in!" });
     });
@@ -61,7 +65,7 @@ router.post("/signup", async (req, res) => {
     if (!newUser) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect email, please try again" });
       return;
     }
 
@@ -70,15 +74,15 @@ router.post("/signup", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect password, please try again" });
       return;
     }
 
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.loggedIn = true;
-
-      res.json({ user: newUser, message: "You are now logged in!" });
+      res.redirect("/login");
+      // res.json({ user: newUser, message: "You are now logged in!" });
     });
   } catch (err) {
     res.status(400).json(err);
