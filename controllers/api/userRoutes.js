@@ -45,7 +45,7 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.loggedIn = true;
-       res.redirect("/profile");
+      //  res.redirect("/profile");
 
       res.json({ user: newUser, message: "You are now logged in!" });
     });
@@ -81,7 +81,7 @@ router.post("/signup", async (req, res) => {
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.loggedIn = true;
-      res.redirect("/login");
+      // res.redirect("/login");
       // res.json({ user: newUser, message: "You are now logged in!" });
     });
   } catch (err) {

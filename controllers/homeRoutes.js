@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
     // Pass serialized data and session flag into template
     res.render("homepage", {
       blogs,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -44,7 +44,7 @@ router.get("/blog/:id", async (req, res) => {
 
     res.render("blog", {
       ...blog,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -55,7 +55,7 @@ router.get("/blog/:id", async (req, res) => {
 router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.session.userId, {
       attributes: { exclude: ["password"] },
       include: [{ model: Blog }],
     });
@@ -64,7 +64,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
     res.render("profile", {
       ...user,
-      logged_in: true,
+      loggedIn: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -73,7 +73,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/profile");
     return;
   }
@@ -83,8 +83,8 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/profile");
+  if (req.session.loggedIn) {
+    res.redirect("/login");
     return;
   }
 
