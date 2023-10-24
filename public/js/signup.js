@@ -13,10 +13,14 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      
+       res.redirect("/login");
+      // document.location.replace("/profile");
     } else {
-      alert(response.statusText);
+res.json({ message: "Incorrect email or password, please try again" });
+      // alert(response.statusText);
     }
+    
   }
 };
 

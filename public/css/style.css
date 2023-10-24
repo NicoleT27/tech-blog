@@ -72,6 +72,15 @@ button{
   margin-right: 20px;
   margin-bottom: 10px;
 }
+
+.btn-signup{
+background-color: blanchedalmond;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 90px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
 .card-header{
   font-size: 20px;
 }
@@ -81,4 +90,7 @@ button{
 }
 .form-label{
   font-size: 20px;
+}
+.login-link{
+  text-decoration: none;
 }
