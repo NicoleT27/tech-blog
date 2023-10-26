@@ -1,15 +1,15 @@
 [
   {
     "post_name": "Bootstrap vs Tailwind css?",
-    "post_description": "Bootstrap is used for creating responsive web and mobile applications whereas Tailwind CSS is used to create customized user interfaces"
+    "post_desc": "Bootstrap is used for creating responsive web and mobile applications whereas Tailwind CSS is used to create customized user interfaces"
   },
   {
     "post_name": " Why is JS necessary?",
-    "post_description": " to add interactivity and features to improve the user experience and make the internet much more enjoyable."
+    "post_desc": " to add interactivity and features to improve the user experience and make the internet much more enjoyable."
   },
   {
     "post_name": "How to add icons with animations to your page?",
-    "post_description": "One really unique website is fontawesome. They have a variety of icons you can choose and style as well as diffrent animations you can make them do. "
+    "post_desc": "One really unique website is fontawesome. They have a variety of icons you can choose and style as well as diffrent animations you can make them do. "
   }
 ]
 
