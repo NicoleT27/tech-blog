@@ -32,14 +32,15 @@ if (formElement) {
 
 const deleteBtn = async (event) => {
   if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-
-    const response = await fetch(`/api/blogs/blogs/${id}`, {
-      method: 'DELETE',
+  
+    const id = event.target.getAttribute('data-id');  
+    console.log(id)
+    const response = await fetch(`/api/blogs/${id}`, {
+      method: "Delete",
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      // document.location.replace('/profile');
     } else {
       alert('Failed to delete post');
     }

@@ -132,3 +132,10 @@ label{
 .blog-name{
   text-align: left;
 }
+.blog-list{
+  margin-top: 200px;
+}
+
+.currentPost{
+margin-left: 250px;
+}

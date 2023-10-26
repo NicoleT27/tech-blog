@@ -22,21 +22,23 @@
     </form>
   </div>
   </div>
-{{#if blog.length}}
+{{#if blogs.length}}
   <div class="col-md-6 blog-list">
-    <h3>Current Posts:</h3>
-
+      <form class="form current-blog">
+    <h3 class="currentPost">Current Posts:</h3>
     {{#each blogs as |blog|}}
       <div class="row mb-2">
         <div class="col-md-8">
-          <h4><a href="/blog/{{blog.id}}">{{blog.name}}</a></h4>
+          <input class="form-input-name" type="text" id="currentPost-name" name="current-name"></input>
+           <input class="form-input-name" id="currentPost-desc" name="current-name"></input>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+          <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">Delete</button>
         </div>
       </div>
     {{/each}}
   </div>
 {{/if}}
+</form>
 
 <script src="./js/profile.js"></script>

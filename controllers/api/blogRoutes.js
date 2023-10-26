@@ -23,7 +23,7 @@ router.delete("/:id", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-
+console.log(blogData);
     if (!blogData) {
       res.status(404).json({ message: "No blog post found with this id!" });
       return;
