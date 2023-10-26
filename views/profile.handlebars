@@ -29,8 +29,8 @@
     {{#each blogs as |blog|}}
       <div class="row mb-2">
         <div class="col-md-8">
-          <input class="form-input-name" type="text" id="currentPost-name" name="current-name"></input>
-           <input class="form-input-name" id="currentPost-desc" name="current-name"></input>
+          <input class="form-input-name" type="text" id="current-name" name="current-name"></input>
+           <input class="form-input-name" type="text" id="current-desc" name="current-desc"><span class="date">Created on {{format_date blog.createdAt}}</span></input>
         </div>
         <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">Delete</button>
