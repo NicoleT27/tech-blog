@@ -27,12 +27,13 @@
       <form class="form current-blog">
     <h3 class="currentPost">Current Posts:</h3>
     {{#each blogs as |blog|}}
-      <div class="row mb-2">
+     <div class="row mb-2">
         <div class="col-md-8">
-          <input class="form-input-name" type="text" id="current-name" name="current-name"></input>
-           <input class="form-input-name" type="text" id="current-desc" name="current-desc"><span class="date">Created on {{format_date blog.createdAt}}</span></input>
+          <input class="form-input-name" type="text" id="current-name" name="current-name" value="{{blog.post_name}}"></input>
+          <input class="form-input-name" type="text" id="current-desc" name="current-desc" value="{{blog.post_desc}}"><span class="date">Created on
+            {{format_date blog.createdAt}}</span></input>
         </div>
-        <div class="col-md-4">
+          <div class="col-md-4">
           <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">Delete</button>
         </div>
       </div>
