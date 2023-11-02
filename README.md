@@ -1,5 +1,5 @@
 # tech-blog
- a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. 
+ a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and delete them as well.
 
 
 
@@ -30,11 +30,11 @@ npm install
 
 ## Usage
 1. Open webpage
-2. Click between log in or sign up 
+2. Click between the directory: Home, Login, Signup, Dashboard or Logout
 3. Once inside of the page you can:
-   - example
-   - example
-   - Example  
+   - Name your post and give a description of the post
+   - Next you can click create and it will populate at the bottom of the screen
+   - If you want to delete the post you can simply click Delete and it will go away. 
 
 
 ## License
@@ -42,7 +42,7 @@ npm install
 
 
 ## Deployed-application-link
-
+https://tech-blog11-2-2023-699e6f1531d1.herokuapp.com/
 
 
 
