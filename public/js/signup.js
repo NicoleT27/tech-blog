@@ -51,7 +51,19 @@ signupBtn.addEventListener("click", function () {
 
     }
   } else {
-    window.location.href = "/login";
+    let success = document.createElement("p");
+    success.setAttribute("id", "success");
+    success.innerHTML = "New User saved";
+    success.style.marginTop = "250px";
+
+    let container = document.createElement("div");
+    container.appendChild(success);
+
+    document.body.appendChild(container);
+
+      setTimeout(function () {
+        window.location.replace("/login");
+      }, 1000);
   }
 });
 
