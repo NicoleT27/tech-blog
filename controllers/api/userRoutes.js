@@ -51,7 +51,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/signup", async (req, res) => {
+router.post("/users", async (req, res) => {
   try {
     const newUser = await User.findOne({
       where: { username: req.body.username },

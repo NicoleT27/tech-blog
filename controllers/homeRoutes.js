@@ -80,7 +80,8 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.signup) {
+     alert("User Already Exists Please log in instead");
     res.redirect("/login");
     return;
   }

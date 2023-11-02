@@ -17,7 +17,7 @@ const signupFormHandler = async (event) => {
     .value.trim();
 
   if (username && email && password) {
-    const response = await fetch("/api/users/signup", {
+    const response = await fetch("/api/users",{
       method: "POST",
       body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
@@ -50,6 +50,9 @@ signupBtn.addEventListener("click", function () {
       hasWarning = true;
 
     }
+    if (req.session.signup){
+          alert("User Already Exists Please log in instead");
+    }
   } else {
     let success = document.createElement("p");
     success.setAttribute("id", "success");
@@ -61,9 +64,9 @@ signupBtn.addEventListener("click", function () {
 
     document.body.appendChild(container);
 
-      setTimeout(function () {
-        window.location.replace("/login");
-      }, 1000);
+      // setTimeout(function () {
+      //   window.location.replace("/login");
+      // }, 1000);
   }
 });
 
